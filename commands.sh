@@ -170,3 +170,41 @@ Running via Spring preloader in process 28533
       insert    app/models/user.rb
        route  devise_for :users
 
+cristian@debian-host:~/instagram/instagram$ rake db:migrate
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/actionpack-5.2.4.2/lib/action_dispatch/middleware/stack.rb:37: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/actionpack-5.2.4.2/lib/action_dispatch/middleware/static.rb:111: warning: The called method `initialize' is defined here
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.2/lib/active_record/connection_adapters/sqlite3/schema_statements.rb:60: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.2/lib/active_record/connection_adapters/abstract/schema_definitions.rb:263: warning: The called method `initialize' is defined here
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.2/lib/active_record/schema_migration.rb:30: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.2/lib/active_record/connection_adapters/abstract/schema_definitions.rb:231: warning: The called method `string' is defined here
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.2/lib/active_record/connection_adapters/abstract/schema_definitions.rb:366: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.2/lib/active_record/connection_adapters/abstract/schema_definitions.rb:415: warning: The called method `new_column_definition' is defined here
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.2/lib/active_record/connection_adapters/abstract/schema_creation.rb:19: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.2/lib/active_record/connection_adapters/abstract/schema_statements.rb:1066: warning: The called method `type_to_sql' is defined here
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.2/lib/active_record/internal_metadata.rb:37: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.2/lib/active_record/connection_adapters/abstract/schema_definitions.rb:231: warning: The called method `string' is defined here
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.2/lib/active_record/transactions.rb:212: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.2/lib/active_record/connection_adapters/abstract/database_statements.rb:260: warning: The called method `transaction' is defined here
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.2/lib/active_record/connection_adapters/abstract/transaction.rb:171: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.2/lib/active_record/connection_adapters/abstract/transaction.rb:97: warning: The called method `initialize' is defined here
+== 20200510042025 DeviseCreateUsers: migrating ================================
+-- create_table(:users)
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.2/lib/active_record/connection_adapters/abstract/schema_statements.rb:301: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.2/lib/active_record/connection_adapters/abstract/schema_definitions.rb:204: warning: The called method `primary_key' is defined here
+   -> 0.0020s
+-- add_index(:users, :email, {:unique=>true})
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.2/lib/active_record/connection_adapters/abstract/schema_statements.rb:764: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.2/lib/active_record/connection_adapters/abstract/schema_statements.rb:1135: warning: The called method `add_index_options' is defined here
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.2/lib/active_record/connection_adapters/abstract/schema_statements.rb:1162: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.2/lib/active_record/connection_adapters/abstract/schema_statements.rb:1215: warning: The called method `quoted_columns_for_index' is defined here
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.2/lib/active_record/connection_adapters/abstract/schema_statements.rb:1219: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.2/lib/active_record/connection_adapters/abstract/schema_statements.rb:1207: warning: The called method `add_options_for_index_columns' is defined here
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.2/lib/active_record/connection_adapters/abstract/schema_statements.rb:1209: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.2/lib/active_record/connection_adapters/abstract/schema_statements.rb:1190: warning: The called method `add_index_sort_order' is defined here
+   -> 0.0015s
+-- add_index(:users, :reset_password_token, {:unique=>true})
+   -> 0.0016s
+== 20200510042025 DeviseCreateUsers: migrated (0.0066s) =======================
+
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activemodel-5.2.4.2/lib/active_model/type/integer.rb:13: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activemodel-5.2.4.2/lib/active_model/type/value.rb:8: warning: The called method `initialize' is defined here
