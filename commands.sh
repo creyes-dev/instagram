@@ -450,3 +450,35 @@ rails_blob_representation GET    /rails/active_storage/representations/:signed_b
 update_rails_disk_service PUT    /rails/active_storage/disk/:encoded_token(.:format)                                      active_storage/disk#update
      rails_direct_uploads POST   /rails/active_storage/direct_uploads(.:format)                                           active_storage/direct_uploads#create
 
+cristian@debian-host:~/instagram/instagram$ rails g migration AddNameToUser name:string
+The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/actionpack-5.2.4.2/lib/action_dispatch/middleware/stack.rb:37: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/actionpack-5.2.4.2/lib/action_dispatch/middleware/static.rb:111: warning: The called method `initialize' is defined here
+Running via Spring preloader in process 16858
+      invoke  active_record
+      create    db/migrate/20200517021758_add_name_to_user.rb
+cristian@debian-host:~/instagram/instagram$ 
+
+cristian@debian-host:~/instagram/instagram$ rails db:migrate
+The dependency tzinfo-data (>= 0) will be unused by any of the platforms Bundler is installing for. Bundler is installing for ruby but the dependency is only for x86-mingw32, x86-mswin32, x64-mingw32, java. To add those platforms to the bundle, run `bundle lock --add-platform x86-mingw32 x86-mswin32 x64-mingw32 java`.        
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/actionpack-5.2.4.2/lib/action_dispatch/middleware/stack.rb:37: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/actionpack-5.2.4.2/lib/action_dispatch/middleware/static.rb:111: warning: The called method `initialize' is defined here
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.2/lib/active_record/transactions.rb:212: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.2/lib/active_record/connection_adapters/abstract/database_statements.rb:260: warning: The called method `transaction' is defined here
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.2/lib/active_record/connection_adapters/abstract/transaction.rb:171: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.2/lib/active_record/connection_adapters/abstract/transaction.rb:97: warning: The called method `initialize' is defined here
+== 20200517021758 AddNameToUser: migrating ====================================
+-- add_column(:users, :name, :string)
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.2/lib/active_record/connection_adapters/abstract/schema_definitions.rb:468: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.2/lib/active_record/connection_adapters/abstract/schema_definitions.rb:415: warning: The called method `new_column_definition' is defined here
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.2/lib/active_record/connection_adapters/abstract/schema_creation.rb:19: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.2/lib/active_record/connection_adapters/abstract/schema_statements.rb:1066: warning: The called method `type_to_sql' is defined here
+   -> 0.0009s
+== 20200517021758 AddNameToUser: migrated (0.0011s) ===========================
+
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.2/lib/active_record/persistence.rb:705: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.2/lib/active_record/timestamp.rb:105: warning: The called method `_update_record' is defined here
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activemodel-5.2.4.2/lib/active_model/type/integer.rb:13: warning: Using the last argument as keyword parameters is deprecated; maybe ** should be added to the call
+/home/cristian/.rvm/gems/ruby-2.7.0/gems/activemodel-5.2.4.2/lib/active_model/type/value.rb:8: warning: The called method `initialize' is defined here
+
+
