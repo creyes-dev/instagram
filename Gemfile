@@ -64,3 +64,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise', '4.7.1'
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails', '4.4.0'
+gem 'toastr-rails'
