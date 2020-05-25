@@ -616,3 +616,32 @@ cristian@debian-host:~/instagram/instagram$ rake db:migrate
    -> 0.0004s
 == 20200525030413 AddFieldsToUser: migrated (0.0014s) =========================
 
+cristian@debian-host:~/instagram/instagram$ rails generate model Post content:string user:references
+TRunning via Spring preloader in process 3183
+      invoke  active_record
+      create    db/migrate/20200525194934_create_posts.rb
+      create    app/models/post.rb
+      invoke    test_unit
+      create      test/models/post_test.rb
+      create      test/fixtures/posts.yml
+
+cristian@debian-host:~/instagram/instagram$ rails generate model Photo image:string post:references
+Running via Spring preloader in process 3255
+      invoke  active_record
+      create    db/migrate/20200525195141_create_photos.rb
+      create    app/models/photo.rb
+      invoke    test_unit
+      create      test/models/photo_test.rb
+      create      test/fixtures/photos.yml
+
+cristian@debian-host:~/instagram/instagram$ rake db:migrate
+== 20200525194934 CreatePosts: migrating ======================================
+-- create_table(:posts)
+   -> 0.0032s
+== 20200525194934 CreatePosts: migrated (0.0033s) =============================
+
+== 20200525195141 CreatePhotos: migrating =====================================
+-- create_table(:photos)
+   -> 0.0032s
+== 20200525195141 CreatePhotos: migrated (0.0033s) ============================
+
