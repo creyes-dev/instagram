@@ -596,9 +596,23 @@ cristian@debian-host:~/instagram/instagram$ rails generate controller Users show
       invoke    scss
       create      app/assets/stylesheets/users.scss
 
+cristian@debian-host:~/instagram/instagram$ rails generate migration AddFieldsToUser website:string bio:text
+Running via Spring preloader in process 11211
+      invoke  active_record
+      create    db/migrate/20200525030413_add_fields_to_user.rb
+
 cristian@debian-host:~/instagram/instagram$ rake db:migrate
 
 == 20200524220957 AddImageToUsers: migrating ==================================
 -- add_column(:users, :image, :string)
    -> 0.0005s
 == 20200524220957 AddImageToUsers: migrated (0.0007s) =========================
+
+cristian@debian-host:~/instagram/instagram$ rake db:migrate
+== 20200525030413 AddFieldsToUser: migrating ==================================
+-- add_column(:users, :website, :string)
+   -> 0.0007s
+-- add_column(:users, :bio, :text)
+   -> 0.0004s
+== 20200525030413 AddFieldsToUser: migrated (0.0014s) =========================
+
