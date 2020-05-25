@@ -579,3 +579,26 @@ Using web-console 3.7.0
 Bundle complete! 22 Gemfile dependencies, 88 gems now installed.
 Use `bundle info [gemname]` to see where a bundled gem is installed.
 
+cristian@debian-host:~/instagram/instagram$ rails generate controller Users show
+      create  app/controllers/users_controller.rb
+       route  get 'users/show'
+      invoke  erb
+      create    app/views/users
+      create    app/views/users/show.html.erb
+      invoke  test_unit
+      create    test/controllers/users_controller_test.rb
+      invoke  helper
+      create    app/helpers/users_helper.rb
+      invoke    test_unit
+      invoke  assets
+      invoke    coffee
+      create      app/assets/javascripts/users.coffee
+      invoke    scss
+      create      app/assets/stylesheets/users.scss
+
+cristian@debian-host:~/instagram/instagram$ rake db:migrate
+
+== 20200524220957 AddImageToUsers: migrating ==================================
+-- add_column(:users, :image, :string)
+   -> 0.0005s
+== 20200524220957 AddImageToUsers: migrated (0.0007s) =========================
