@@ -8,4 +8,8 @@ Rails.application.routes.draw do
     #/users/2 -> Users controller, show action, params {id: '2'}
 
     resources :users, only: [:show]
+
+    resources :posts, only: [:index, :show, :create] do
+      resources :photos, only: [:create]
+    end
 end
