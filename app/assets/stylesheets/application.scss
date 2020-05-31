@@ -368,5 +368,14 @@ dz-image {
     @extend .love;
     background-position: -150px -353px;
   }
+}
 
+.comment-list {
+  height: 310px;
+  overflow: auto;
+  }
+
+.post-show-img {
+  background-color: #fafafa;
+  margin: -10px 0;
 }
