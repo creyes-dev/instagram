@@ -990,3 +990,18 @@ cristian@debian-host:~/instagram/instagram$ rake db:migrate
 -- create_table(:likes)
    -> 0.0034s
 == 20200606043109 CreateLikes: migrated (0.0034s) =============================
+
+cristian@debian-host:~/instagram/instagram$ rails generate model Comment content:text post:references user:references
+Running via Spring preloader in process 8014
+      invoke  active_record
+      create    db/migrate/20200606224853_create_comments.rb
+      create    app/models/comment.rb
+      invoke    test_unit
+      create      test/models/comment_test.rb
+      create      test/fixtures/comments.yml
+
+cristian@debian-host:~/instagram/instagram$ rake db:migrate
+== 20200606224853 CreateComments: migrating ===================================
+-- create_table(:comments)
+   -> 0.0045s
+== 20200606224853 CreateComments: migrated (0.0046s) ==========================
