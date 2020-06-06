@@ -65,11 +65,15 @@
       <hr class="mt-0">
 
       <div class="row actions">
-        <a href="#" class="core-sprite love hide-text">Love</a>
+        <div id="like-icon-post-<%= @post.id.to_s %>">
+          <%= render "like_icon", {is_liked: @is_liked, post: @post} %>
+        </div>
         <a href="#" class="core-sprite comment hide-text">Comment</a>
         <a href="#" class="core-sprite bookmark hide-text ml-auto">Bookmark</a>
       </div>
-      <div><strong><%= pluralize(16,"Like") %></strong></div>
+      <div id="like-text-post-<%= @post.id.to_s %>">
+        <% render "like_text", {likes: @likes} %>
+      </div>
       <div class="light-color post-time"><%= time_ago_in_words(@post.created_at).upcase %> AGO</div>
       <hr>
       <div class="row actions">

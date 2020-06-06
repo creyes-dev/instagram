@@ -2,7 +2,7 @@ class LikesController < ApplicationController
   before_action :authenticate_user!
 
   def create
-    @like = current_user.likes.build(likes_params)
+    @like = current_user.likes.build(like_params)
     @post = @like.post
     if @like.save
       respond_to :js
