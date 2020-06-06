@@ -975,3 +975,12 @@ Using uglifier 4.2.0
 Using web-console 3.7.0
 Bundle complete! 25 Gemfile dependencies, 101 gems now installed.
 Use `bundle info [gemname]` to see where a bundled gem is installed.
+
+cristian@debian-host:~/instagram/instagram$ rails generate model like post:references user:references
+Running via Spring preloader in process 9289
+      invoke  active_record
+      create    db/migrate/20200606043109_create_likes.rb
+      create    app/models/like.rb
+      invoke    test_unit
+      create      test/models/like_test.rb
+      create      test/fixtures/likes.yml
