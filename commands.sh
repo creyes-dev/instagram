@@ -984,3 +984,9 @@ Running via Spring preloader in process 9289
       invoke    test_unit
       create      test/models/like_test.rb
       create      test/fixtures/likes.yml
+
+cristian@debian-host:~/instagram/instagram$ rake db:migrate
+== 20200606043109 CreateLikes: migrating ======================================
+-- create_table(:likes)
+   -> 0.0034s
+== 20200606043109 CreateLikes: migrated (0.0034s) =============================
